@@ -190,7 +190,7 @@ nav {
   margin: 20px;
 }
 
-.featureDesc {
+.featuredDesc {
   color: gray;
   width: 50%;
   height: 100px;
@@ -199,7 +199,7 @@ nav {
 /* product */
 
 .product {
-  height: 60vh;
+  height: 60vw;
   background-color: whitesmoke;
   position: relative;
   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
@@ -247,7 +247,15 @@ nav {
 }
 
 .productButton {
-  padding: 5px;
-  border: 2px solid black;
+  float: right;
   padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.productButton:hover {
+  background-color: white;
+  color: black;
 }
