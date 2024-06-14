@@ -97,7 +97,10 @@ menuItems.forEach((item, index) => {
 
         currentProductTitle.textContent = chosenProduct.title
         currentProductPrice.textContent = "$" + chosenProduct.price
-    currentProductImg.src = chosenProduct.colors[0].img
+        currentProductImg.src = chosenProduct.colors[0].img
+        currentProductColors.forEach((color, index)=> {
+            color.style.backgroundColor = chosenProduct.colors[index].code
     })
+  })
 })
 
