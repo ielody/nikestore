@@ -6,6 +6,7 @@ const products = [
         id: 1,
         title: "Air Force",
         price: 119,
+        description: "amazing black leather shoes that supports your ankles",
         colors: [
             {
         code: "black",
@@ -22,6 +23,7 @@ const products = [
         id: 2,
         title: "Air Jordan",
         price: 149,
+        description: "beautiful, gray leather show that makes your ankles float",
         colors: [
             {
               code: "lightgray",
@@ -37,6 +39,7 @@ const products = [
           id: 3,
           title: "Blazer",
           price: 109,
+          description: "well-made and sturdy shoes that will bring up your basketball game",
           colors: [
             {
               code: "lightgray",
@@ -52,6 +55,7 @@ const products = [
           id: 4,
           title: "Crater",
           price: 129,
+          description: "nothing makes more sense that buying shoes that Steph Curry can't get enough of",
           colors: [
             {
               code: "black",
@@ -67,6 +71,7 @@ const products = [
           id: 5,
           title: "Hippie",
           price: 99,
+          description: "hipp hopp hippety hopp, check out the new Hippie",
           colors: [
             {
               code: "gray",
@@ -87,6 +92,7 @@ const currentProductTitle = document.querySelector(".productTitle")
 const currentProductPrice = document.querySelector(".productPrice")
 const currentProductColors = document.querySelectorAll(".color")
 const currentProductSizes = document.querySelectorAll(".size")
+const currentProductDesc = document.querySelector(".productDesc")
 
 menuItems.forEach((item, index) => {
     item.addEventListener("click", () => {
@@ -95,6 +101,7 @@ menuItems.forEach((item, index) => {
         //change the choosen product
         chosenProduct = products[index]
 
+        currentProductDesc.textContent = chosenProduct.description
         currentProductTitle.textContent = chosenProduct.title
         currentProductPrice.textContent = "$" + chosenProduct.price
         currentProductImg.src = chosenProduct.colors[0].img
